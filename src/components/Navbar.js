@@ -9,7 +9,7 @@ const Navbar = () => {
       direction="row"
       justifyContent="space-around"
       sx={{
-        gap: { sm: "122px", xs: "40px" },
+        gap: { sm: "30px", xs: "40px" },
         mt: { sm: "32px", xs: "20px" },
         justifyContent: "none",
       }}
@@ -19,10 +19,10 @@ const Navbar = () => {
         <img
           src={Logo}
           alt="Logo"
-          style={{ width: "48px", height: "48px", margin: "0 20px" }}
+          style={{ width: "100px", height: "79px", margin: "0 20px" }}
         />
       </Link>
-      <Stack direction="row" gap="40px" fontSize="24px" alignItems="flex-end">
+      <Stack direction="row" gap="40px" fontSize="24px" alignItems="center">
         <Link
           to="/"
           style={{

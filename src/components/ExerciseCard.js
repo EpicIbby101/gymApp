@@ -2,9 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Stack, Typography } from "@mui/material";
 
+function ScrollToTopOnMount()  {
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  return null;
+}
+
 const ExerciseCard = ({ exercise }) => {
   return (
-    <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
+    <div>
+      <ScrollToTopOnMount />
+    <Link className="exercise-card" to={`/exercise/${exercise.id}`} preventScrollReset={false}>
       <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />
       <Stack direction="row">
         <Button
@@ -44,6 +54,7 @@ const ExerciseCard = ({ exercise }) => {
         {exercise.name}
       </Typography>
     </Link>
+    </div>
   );
 };
 
